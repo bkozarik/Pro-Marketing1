@@ -1,0 +1,456 @@
+@media (max-width: 1440px) {
+    .review-single {
+        width: 35%;
+        margin: 0 auto;
+   }
+
+   .review-single:nth-child(3) {
+    margin-top: 100px;
+    }
+
+    .review-single:nth-child(4) {
+        margin-top: 100px;
+        }
+
+   .review-person {
+       margin: 0;
+       padding-left: 35px;
+       width:  100%;
+   }
+
+   .reviews-main {
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
+    }
+}
+
+@media (max-width: 1340px) {
+    .about-min {
+        flex-direction: column;
+        padding: 100px;
+    }
+
+    .about-btn {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .more-about {
+        margin-right: 0;
+    }
+
+    .about-left {
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .about-right {
+        width: 100%;
+        margin: 0;
+        margin-top: 100px;
+        padding: 0;
+    }
+    .about-right .box {
+        width: 90%;
+    }
+    .box-center {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .box-about {
+        width: 50%;
+        margin: 0;
+    }
+
+}
+
+
+@media (min-width: 1177px) {
+    .outer-menu {
+        display: none;
+    }
+}
+@media (max-width: 1177px) {
+    .menu li:nth-child(2),
+    .menu li:nth-child(3),
+    .menu li:nth-child(4),
+    .menu li:nth-child(5),
+    .menu li:nth-child(6) {
+        display: none
+    }
+
+    .outer-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+      }
+      .outer-menu .checkbox-toggle {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        left: 95px;
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div {
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        top: 0;
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        opacity: 0;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu {
+        pointer-events: auto;
+        visibility: visible;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu > div {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        transition-duration: 0.75s;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+      }
+      .outer-menu .checkbox-toggle:hover + .hamburger {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+        -webkit-transform: rotate(225deg);
+                transform: rotate(225deg);
+      }
+      .outer-menu .hamburger {
+        position: relative;
+        top: 0;
+        left: 80px;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 0.5em 1em;
+        background: none;
+        border-radius: 0 0.12em 0.12em 0;
+        cursor: pointer;
+        transition: box-shadow 0.4s ease;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .hamburger > div {
+        position: relative;
+        flex: none;
+        width: 70%;
+        height: 2px;
+        background: #ffffff;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .hamburger > div:before,
+      .outer-menu .hamburger > div:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+        transition: all 0.4s ease;
+      }
+      .outer-menu .hamburger > div:after {
+        top: 10px;
+      }
+      .outer-menu .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        visibility: hidden;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        outline: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .menu > div {
+        width: 200vw;
+        height: 200vw;
+        color: #FEFEFE;
+        background: #000;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+        flex: none;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        overflow-y: auto;
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .menu > div > div > ul {
+        list-style: none;
+        padding: 0 1em;
+        margin: 0;
+        display: block;
+        max-height: 100vh;
+      }
+      .outer-menu .menu > div > div > ul > li {
+        padding: 0;
+        margin: 1em;
+        font-size: 24px;
+        display: block;
+      }
+      .outer-menu .menu > div > div > ul > li > a {
+        position: relative;
+        display: inline;
+        cursor: pointer;
+        transition: color 0.4s ease;
+      }
+      .outer-menu .menu > div > div > ul > li > a:hover {
+        color: #e5e5e5;
+      }
+      .outer-menu .menu > div > div > ul > li > a:hover:after {
+        width: 100%;
+      }
+      .outer-menu .menu > div > div > ul > li > a:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: -0.15em;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #e5e5e5;
+        transition: width 0.4s ease;
+      }
+      .login__links {
+        
+      }
+
+      .menu li {
+        
+      }
+
+      .login__links {
+        margin-left: 0%;
+    }
+      
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  .footer-content .social {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 930px) {
+
+    .clients {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .clients img {
+        padding: 60px 100px 60px 100px;
+    }
+}
+
+@media (max-width: 820px) {
+    .about-right {
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .about-boxes {
+        flex-direction: column;
+        width: 90%;
+    }
+    .box-about {
+        margin:  0 auto;
+    }
+
+    .reviews-main {
+        flex-direction: column;
+    }
+    .review-single {
+    padding-top: 100px;
+       margin: 0 auto;
+       width: 100%;
+
+    }
+
+
+    .review-person h4 {
+        margin: 0 auto;
+        position: relative;
+        margin-top: -70px;
+        margin-right: -0px;
+    }
+    .review-person p {
+        margin: 0 auto;
+        position: relative;
+        margin-top: -20px;
+        padding-left: 100px;
+        text-align: left;
+    }
+
+    .review-bg {
+        margin: 0 auto;
+    }
+
+    .review-person {
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+    }
+
+
+
+}
+
+@media(max-width: 860px) {
+  .footer-content .social {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .footer-menu-links div {
+    margin-bottom: 50px;
+  }
+  .footer-menu-links {
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  /* .footer-menu-links div:nth-child(2) {
+    padding: 0;
+  } */
+  /* .footer-menu-links div:nth-child(3) {
+    padding: 0;
+  } */
+}
+
+@media (max-width: 600px) {
+  /* .footer-menu-links div:nth-child(3) {
+    padding: 0;
+  } */
+}
+
+@media (max-width: 450px) {
+  .footer-menu-links div:nth-child(3) {
+    padding: 0;
+  }
+}
+
+
+.about-left {
+  width: 100%;
+} 
+
+@media (max-width: 750px) {
+  .main-header {
+    padding: 30px;
+  }
+  .outer-menu .checkbox-toggle {
+    left: 35px;
+  }
+  .outer-menu .hamburger {
+    left: 20px;
+  }
+  .outer-menu .menu > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .login__links {
+    display: none;
+  }
+  .reg-li {
+    display: none;
+  }
+  .about-min {
+    padding: 30px;
+  }
+  .heading {
+    padding: 30px;
+  }
+  .box-about {
+    width: 100%;
+}
+
+.about-btn1 {
+  padding: 10px;
+}
+.reviews-main {
+  width: 100%;
+}
+
+footer {
+  padding: 10px;
+}
+.footer-content div {
+  padding: 0;
+}
+.social {
+  width: 100%;
+}
+.see-about {
+  margin-right: 20px;
+}
+.about-right {
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.about-btn {
+  display: flex;
+}
+}
